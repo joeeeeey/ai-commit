@@ -1,0 +1,36 @@
+diff --git a/apps/dify/config/secret_env.sh b/apps/dify/config/secret_env.sh
+index e9c18c5161..d64c3bf5ad 100644
+--- a/apps/dify/config/secret_env.sh
++++ b/apps/dify/config/secret_env.sh
+@@ -11,6 +11,6 @@ export REDIS_PORT={{.Data.data.REDIS_PORT}}
+ export REDIS_USERNAME={{.Data.data.REDIS_USERNAME}}
+ export REDIS_PASSWORD={{.Data.data.REDIS_PASSWORD}}
+ export WEAVIATE_API_KEY={{.Data.data.WEAVIATE_API_KEY}}
+-eval export CELERY_BROKER_URL="redis://${REDIS_USERNAME}:${REDIS_PASSWORD}@${REDIS_HOST}:${REDIS_PORT}/1"
++eval export CELERY_BROKER_URL="redis://${REDIS_HOST}:${REDIS_PORT}/1"
+ {{end}}
+ 
+diff --git a/release/app-03-stage.k8s.local/release/dify/dify.yaml b/release/app-03-stage.k8s.local/release/dify/dify.yaml
+index c426d135a9..a20e138bf8 100644
+--- a/release/app-03-stage.k8s.local/release/dify/dify.yaml
++++ b/release/app-03-stage.k8s.local/release/dify/dify.yaml
+@@ -226,7 +226,7 @@
+       "template": {
+          "metadata": {
+             "annotations": {
+-               "checksum.wish.com/env-config": "ed54b6fea3bb57413dcb0752bc25a482"
++               "checksum.wish.com/env-config": "38ddf7ebaf6edd83948482e51d55a8fb"
+             },
+             "labels": {
+                "app": "dify-api"
+@@ -389,7 +389,7 @@
+             "initContainers": [
+@@ -458,7 +458,7 @@
+       "template": {
+          "metadata": {
+             "annotations": {
+-               "checksum.wish.com/env-config": "ed54b6fea3bb57413dcb0752bc25a482"
++               "checksum.wish.com/env-config": "38ddf7ebaf6edd83948482e51d55a8fb"
+             },
+             "labels": {
+                "app": "dify-sandbox"
