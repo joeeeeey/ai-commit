@@ -19,7 +19,7 @@ create_hook:
 	cp hook/prepare-commit-msg .git/hooks/prepare-commit-msg
 	cp build/commit_msg_generator_$(OS)_$(ARCH) .git/hooks/commit_msg_generator
 
-cross_platform_build:
+build-all:
 	# Build for Linux AMD64
 	GOOS=linux GOARCH=amd64 go build -o build/commit_msg_generator_linux_amd64 src/commit_msg_generator.go
 

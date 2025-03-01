@@ -14,6 +14,16 @@ Here's a quick GIF showing how `ai-commit` works in action:
 
 ---
 
+## Quick Start
+
+1. **Initialize a Git repository** (or use an existing one).  
+2. **Install** AI Commit in 1 click:
+
+   ```bash
+   # from within your project folder (must have .git/):
+   curl -sL https://raw.githubusercontent.com/joeeeeey/ai-commit/main/install.sh | bash
+
+
 ## Installation
 
 ### Prerequisites

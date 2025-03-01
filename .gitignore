@@ -1,2 +1,3 @@
 test/test-commit-msg.txt
 build/*
+.DS_Store
