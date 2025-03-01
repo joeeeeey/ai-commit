@@ -10,3 +10,7 @@ build:
 	go build -o bin/commit_msg_generator .
 	chmod +x bin/prepare-commit-msg
 	chmod +x bin/commit_msg_generator
+
+create_hook:
+	cp bin/prepare-commit-msg .git/hooks/prepare-commit-msg
+	cp bin/commit_msg_generator .git/hooks/commit_msg_generator
