@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
+echo "Running AI commit..."
 # echo "Running prepare-commit-msg with args: $@"
 
 # If second arg is "merge", skip
