@@ -9,8 +9,7 @@ This repo provides a cross-platform Go binary and a Git `prepare-commit-msg` hoo
 
 Here's a quick GIF showing how `ai-commit` works in action:
 
-![demo gif](./path/to/demo.gif)  
-*(Replace with your actual GIF or a direct link.)*
+![demo gif](./static/demo.gif)  
 
 ---
 
@@ -20,7 +19,6 @@ Here's a quick GIF showing how `ai-commit` works in action:
 2. **Install** AI Commit in 1 click:
 
    ```bash
-   # from within your project folder (must have .git/):
    curl -sL https://raw.githubusercontent.com/joeeeeey/ai-commit/main/install.sh | bash
 
 
@@ -41,8 +39,7 @@ You can provide a convenient script (e.g. `install.sh`) that people can curl & r
 curl -s https://raw.githubusercontent.com/joeeeeey/ai-commit/main/install.sh | bash
 ```
 
-## Development
-test by curl
+## Test by curl
 ```bash
 
 curl -X POST 'https://api.dify.ai/v1/workflows/run' \
@@ -56,5 +53,4 @@ curl -X POST 'https://api.dify.ai/v1/workflows/run' \
     "response_mode": "blocking",
     "user": "abc-123"
 }'
-
 ```
