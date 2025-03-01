@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Running prepare-commit-msg with args: $@"
+# echo "Running prepare-commit-msg with args: $@"
 
 # If second arg is "merge", skip
 if [ "$2" = "merge" ]; then
