@@ -13,10 +13,10 @@ Here's a quick GIF showing how `ai-commit` works in action:
 
 ---
 
-## Quick Start
+## Quick Install
 
-1. **Initialize a Git repository** (or use an existing one).  
-2. **Install** AI Commit in 1 click:
+### Install by CURL
+The following command will auto add git-hook under the current directory with .git
 
 ```bash
 curl -sL https://raw.githubusercontent.com/joeeeeey/ai-commit/main/install.sh | bash
@@ -24,6 +24,7 @@ curl -sL https://raw.githubusercontent.com/joeeeeey/ai-commit/main/install.sh | 
 
 ## Uninstall
 ```bash
+# cd $dir_with_git
 rm .git/hooks/prepare-commit-msg
 rm .git/hooks/commit_msg_generator
 ```
