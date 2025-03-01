@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
+set -e
 
-# If there's already a message (like merges or rebase), skip
-[ -s "$1" ] && exit 0
+echo "Running prepare-commit-msg with args: $@"
 
-# Call your compiled binary
+# If second arg is "merge", skip
+if [ "$2" = "merge" ]; then
+    echo "Skipping AI generation (merge commit)."
+    exit 0
+fi
+
+# Call your compiled Go script
 .git/hooks/commit_msg_generator "$1"
