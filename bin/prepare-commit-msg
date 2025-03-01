@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# If there's already a message (like merges or rebase), skip
+[ -s "$1" ] && exit 0
+
+# Call your compiled binary
+.git/hooks/commit_msg_generator "$1"
