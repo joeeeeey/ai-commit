@@ -108,9 +108,9 @@ func main() {
 		os.Exit(1)
 	}
 
-	apiKey := os.Getenv("API_KEY")
+	apiKey := os.Getenv("AI_COMMIT_TOKEN")
 	if apiKey == "" {
-		fmt.Fprintln(os.Stderr, "API_KEY environment variable not set.")
+		fmt.Fprintln(os.Stderr, "AI_COMMIT_TOKEN environment variable not set.")
 		os.Exit(1)
 	}
 	req.Header.Set("Authorization", "Bearer "+apiKey)
